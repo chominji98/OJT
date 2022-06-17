@@ -1,0 +1,34 @@
+{
+  "name": "ojt-server",
+  "version": "0.0.1",
+  "description": "OJT SERVER",
+  "main": "src/index.js",
+  "author": "2UIN",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "nodemon --exec babel-node -- src/index.js"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "koa": "^2.13.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/node": "^7.18.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.18.0",
+    "babel-jest": "^28.1.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.0",
+    "jest": "^28.1.1",
+    "nodemon": "^2.0.16"
+  }
+}
