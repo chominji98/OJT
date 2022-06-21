@@ -1,0 +1,13 @@
+@BASEURL=http://localhost:3000/api/v1
+
+
+GET {{BASEURL}}
+
+
+GET {{BASEURL}}/users
+
+POST {{BASEURL}}/users
+
+PUT {{BASEURL}}/users
+
+DELETE {{BASEURL}}/users

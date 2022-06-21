@@ -10,14 +10,19 @@
     "start": "nodemon --exec babel-node -- src/index.js"
   },
   "dependencies": {
-    "babel-eslint": "^10.1.0",
-    "koa": "^2.13.4"
+    "@hapi/boom": "^10.0.0",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "koa-compose": "^4.1.0",
+    "koa-helmet": "^6.1.0",
+    "koa-router": "^10.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/eslint-parser": "^7.18.2",
     "@babel/node": "^7.18.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.18.0",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^28.1.1",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-preset-env": "^1.7.0",

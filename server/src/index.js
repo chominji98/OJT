@@ -1,28 +1,23 @@
 import Koa from "koa";
+import helmet from "koa-helmet";
+import KoaCompose from "koa-compose";
+import errorHandlerMd from "@/middlewares/errorHandlerMd";
+import koaBodyMd from "@/middlewares/koaBodyMd";
+import routerMd from "@/middlewares/routerMd";
 
-const app = new Koa();
-const app2 = new Koa();
+const startApp = () => {
+  const app = new Koa();
 
-// java xml -> DI
-// javascript koa DI -> cb
+  const middlewares = [
+    errorHandlerMd,
+    helmet(),
+    koaBodyMd,
+    ...routerMd,
+  ];
 
-const callback1 = async (ctx, next) => {
-  ctx.state.data = "callback 1";
+  app.use(KoaCompose(middlewares));
 
-  await next();
+  app.listen(3000);
 };
 
-const callback2 = async (ctx) => {
-  ctx.body = `${ctx.state.data} Hello World`;
-};
-
-app.use(callback1);
-app.use(callback2);
-
-app.listen(3000);
-
-app2.use(async (ctx) => {
-  ctx.body = "Hello World2";
-});
-
-app2.listen(3001);
+startApp();
