@@ -4,8 +4,11 @@ import KoaCompose from "koa-compose";
 import errorHandlerMd from "@/middlewares/errorHandlerMd";
 import koaBodyMd from "@/middlewares/koaBodyMd";
 import routerMd from "@/middlewares/routerMd";
+import mongoose from "mongoose";
 
 const startApp = () => {
+  mongoose.connect("mongodb://localhost:27017/test");
+
   const app = new Koa();
 
   const middlewares = [
