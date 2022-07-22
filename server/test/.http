@@ -12,4 +12,4 @@ Content-Type: application/json
 }
 
 
-GET {{BASEURL}}/users
+GET {{BASEURL}}/users?skip=0&limit=10&userid=userid&username=username
