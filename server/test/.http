@@ -1,13 +1,15 @@
 @BASEURL=http://localhost:3000/api/v1
 
 
-GET {{BASEURL}}
+# 사용자 정보를 저장
+POST {{BASEURL}}/users
+Content-Type: application/json
+
+{
+  "userid": "userid2",
+  "username": "username",
+  "alias": "123"
+}
 
 
 GET {{BASEURL}}/users
-
-POST {{BASEURL}}/users
-
-PUT {{BASEURL}}/users
-
-DELETE {{BASEURL}}/users

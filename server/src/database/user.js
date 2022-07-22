@@ -23,6 +23,8 @@ const userSchema = new Schema({
     default: "USER",
   },
   ...commonSchema.obj,
+}, {
+  versionKey: false,
 });
 
 export default mongoose.model("User", userSchema);

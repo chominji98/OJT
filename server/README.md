@@ -1,0 +1,6 @@
+- ctx.state 구조
+  - joiSchema: 전송된 데이터를 검증하기 위한 joi scheam 객체 저장 변수
+  - curDb: 현재 사용중인 Model (Collection)
+  - newDoc: 새롭게 추가될 Document
+  - response: Object
+    - data: 데이터베이스 결과 저장
