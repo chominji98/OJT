@@ -3,10 +3,6 @@ import mongoose from "mongoose";
 const { Schema, } = mongoose;
 
 const oAuthSchema = new Schema({
-  responseType: {
-    type: String,
-    required: true,
-  },
   clientId: {
     type: String,
     required: true,
@@ -41,7 +37,7 @@ const oAuthSchema = new Schema({
   refreshToken: {
     type: String,
   },
-  expires_in: {//만료 기간
+  expiresIn: {//만료 기간
     type: Date,
     required: true,
   },
