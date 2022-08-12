@@ -1,0 +1,31 @@
+@BASEURL=http://localhost:3000/api/v1
+
+# 사용자 정보를 저장해야 함
+POST {{BASEURL}}/users
+Content-Type: application/json
+
+{
+  "userid": "nanana",
+  "username": "imsoyoung",
+  "alias": "789"
+}
+
+# 몽고를 제외한 모든 데이터베이스는 skip이 아니라 offset을 쓴다.
+# GET {{BASEURL}}/users?skip=0&limit=10&userid=abc1234&username=abcKim
+GET {{BASEURL}}/users
+
+GET {{BASEURL}}/users/62f20993572bac321e631f9b
+
+PUT {{BASEURL}}/users/62f20f65a9301f737e9b73be
+Content-Type: application/json
+
+{
+  "userid": "update",
+  "username": "update",
+  "alias": "111"
+}
+
+DELETE {{BASEURL}}/users/62f20fe03d57846755feb6b4
+
+
+
