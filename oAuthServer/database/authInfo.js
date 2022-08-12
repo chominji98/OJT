@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const { Schema, } = mongoose;
 
-const oAuthSchema = new Schema({
+const authInfoSchema = new Schema({
   clientId: {
     type: String,
     required: true,
@@ -16,6 +16,7 @@ const oAuthSchema = new Schema({
   },
   grantType: {
     type: String,
+    enum: [authorizationCode, implicit,],
     required: true,
   },
   scope: {// 요청 접근 범위
@@ -45,4 +46,4 @@ const oAuthSchema = new Schema({
 
 });
 
-export default mongoose.model("OAuth", oAuthSchema);
+export default mongoose.model("authInfo", authInfoSchema);
