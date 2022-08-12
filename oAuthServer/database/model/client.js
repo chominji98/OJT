@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const { Schema, } = mongoose;
 
-const authInfoSchema = new Schema({
+const clientSchema = new Schema({
   clientId: {
     type: String,
     required: true,
@@ -31,19 +31,6 @@ const authInfoSchema = new Schema({
     type: String,
     required: true,
   },
-  accessToken: {
-    type: String,
-    required: true,
-  },
-  refreshToken: {
-    type: String,
-  },
-  expiresIn: {//만료 기간
-    type: Date,
-    required: true,
-  },
-
-
 });
 
-export default mongoose.model("authInfo", authInfoSchema);
+export default mongoose.model("client", clientSchema);

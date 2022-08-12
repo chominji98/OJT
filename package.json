@@ -2,23 +2,27 @@
   "name": "ojt-server",
   "version": "0.0.1",
   "description": "OJT SERVER",
-  "main": "src/index.js",
+  "main": "swagger/start.js",
+  "type": "module",
   "author": "2UIN",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "nodemon --exec babel-node -- src/index.js"
+    "start": "node swagger/start.js"
   },
   "dependencies": {
     "@hapi/boom": "^10.0.0",
+    "babel": "^6.23.0",
     "joi": "^17.6.0",
     "koa": "^2.13.4",
     "koa-body": "^5.0.0",
     "koa-compose": "^4.1.0",
     "koa-helmet": "^6.1.0",
-    "koa-router": "^10.1.1",
+    "koa-router": "^12.0.0",
     "mongoose": "^6.4.4",
-    "mongoose-query-parser": "^1.3.1"
+    "mongoose-query-parser": "^1.3.1",
+    "swagger2": "^3.0.1",
+    "swagger2-koa": "^3.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
@@ -30,7 +34,7 @@
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "eslint": "^8.17.0",
+    "eslint": "^8.21.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.26.0",
